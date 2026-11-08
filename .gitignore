@@ -1,0 +1,11 @@
+.dotnet/
+out/
+bin/
+obj/
+build-log.txt
+build-errors.txt
+publish/
+.vs/
+*.user
+prototype/index.html
+Aura-win-x64.zip

@@ -1,0 +1,34 @@
+name: "✨ Идея"
+description: Предложить новую функцию или улучшение
+title: "[Идея] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что хочется
+      description: Опиши идею так, как будто она уже готова
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем это нужно
+  - type: dropdown
+    id: area
+    attributes:
+      label: Где
+      options:
+        - Панель задач
+        - Aura Explorer
+        - Меню рабочего стола
+        - Обои
+        - Анимации окон
+        - Темы
+        - Твики Windows
+        - Другое
+  - type: textarea
+    id: refs
+    attributes:
+      label: Примеры и картинки
+      description: Скриншоты, ссылки на похожие программы

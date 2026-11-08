@@ -1,0 +1,48 @@
+name: "🐞 Баг"
+description: Что-то работает не так
+title: "[Баг] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что помогаешь сделать Aura лучше! Лог лежит в `%AppData%\Aura\aura.log`.
+  - type: textarea
+    id: what
+    attributes:
+      label: Что случилось
+      description: Что ты делал и что пошло не так
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      placeholder: |
+        1. Открыть хаб
+        2. ...
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидалось
+  - type: input
+    id: version
+    attributes:
+      label: Версия Aura
+      placeholder: 0.2.0 или номер сборки из Actions
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows
+      options:
+        - Windows 11 24H2 или новее
+        - Windows 11 23H2 или старше
+        - Windows 10
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Лог
+      description: Последние строки из aura.log или build-errors.txt
+      render: text
