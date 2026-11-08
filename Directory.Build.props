@@ -1,0 +1,12 @@
+<Project>
+  <!-- Shared settings for every project in the repo. -->
+  <PropertyGroup>
+    <Authors>Aura contributors</Authors>
+    <Company>Aura</Company>
+    <Copyright>Aura contributors</Copyright>
+    <Deterministic>true</Deterministic>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <SatelliteResourceLanguages>ru;en</SatelliteResourceLanguages>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+</Project>

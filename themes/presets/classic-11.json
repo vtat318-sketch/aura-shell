@@ -1,0 +1,48 @@
+{
+  "$schema": "../../schema/theme.schema.json",
+  "formatVersion": 1,
+  "id": "classic-11",
+  "name": "Классика 11",
+  "author": "Aura",
+  "version": "1.0.0",
+  "tags": [
+    "привычная"
+  ],
+  "palette": {
+    "accent": "#7CC4FF",
+    "surface": "rgba(30,30,34,0.85)",
+    "surfaceSolid": "#1E1E22",
+    "text": "#F5F3FF",
+    "tile": "rgba(255,255,255,0.06)",
+    "border": "rgba(255,255,255,0.10)"
+  },
+  "taskbar": {
+    "layout": "full",
+    "alignment": "center",
+    "height": 52,
+    "iconSize": 24,
+    "radius": 0,
+    "blur": 30,
+    "hoverEffect": "lift",
+    "iconStyle": "plain",
+    "toolsGroup": false
+  },
+  "clock": {
+    "showSeconds": false,
+    "showDate": true
+  },
+  "windows": {
+    "open": "scale",
+    "minimize": "shrink",
+    "durationMs": 200
+  },
+  "wallpaper": {
+    "type": "procedural",
+    "source": "bloom"
+  },
+  "performance": {
+    "pauseOnFullscreen": true,
+    "pauseOnBattery": true,
+    "ecoMode": false
+  }
+}

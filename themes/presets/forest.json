@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/theme.schema.json",
+  "formatVersion": 1,
+  "id": "forest",
+  "name": "Лес",
+  "author": "Aura",
+  "version": "1.0.0",
+  "tags": [
+    "природа",
+    "спокойная"
+  ],
+  "palette": {
+    "accent": "#9BE3B0",
+    "surface": "rgba(10,24,18,0.70)",
+    "surfaceSolid": "#0C1A14",
+    "text": "#F5F3FF",
+    "tile": "rgba(255,255,255,0.07)",
+    "border": "rgba(255,255,255,0.10)"
+  },
+  "taskbar": {
+    "layout": "island",
+    "alignment": "center",
+    "height": 64,
+    "iconSize": 30,
+    "radius": 20,
+    "blur": 22,
+    "hoverEffect": "dock",
+    "iconStyle": "tile",
+    "toolsGroup": true
+  },
+  "clock": {
+    "showSeconds": false,
+    "showDate": true
+  },
+  "windows": {
+    "open": "fade",
+    "minimize": "genie",
+    "durationMs": 320
+  },
+  "wallpaper": {
+    "type": "procedural",
+    "source": "forest"
+  },
+  "performance": {
+    "pauseOnFullscreen": true,
+    "pauseOnBattery": true,
+    "ecoMode": false
+  }
+}

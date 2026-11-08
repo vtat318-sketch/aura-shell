@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/theme.schema.json",
+  "formatVersion": 1,
+  "id": "sakura",
+  "name": "Сакура",
+  "author": "Aura",
+  "version": "1.0.0",
+  "tags": [
+    "тёплая",
+    "стекло"
+  ],
+  "palette": {
+    "accent": "#FFB3C7",
+    "surface": "rgba(40,18,28,0.66)",
+    "surfaceSolid": "#2A121C",
+    "text": "#F5F3FF",
+    "tile": "rgba(255,255,255,0.08)",
+    "border": "rgba(255,255,255,0.10)"
+  },
+  "taskbar": {
+    "layout": "islands",
+    "alignment": "center",
+    "height": 62,
+    "iconSize": 28,
+    "radius": 22,
+    "blur": 28,
+    "hoverEffect": "dock",
+    "iconStyle": "tile",
+    "toolsGroup": true
+  },
+  "clock": {
+    "showSeconds": false,
+    "showDate": true
+  },
+  "windows": {
+    "open": "slide",
+    "minimize": "genie",
+    "durationMs": 340
+  },
+  "wallpaper": {
+    "type": "procedural",
+    "source": "sunset"
+  },
+  "performance": {
+    "pauseOnFullscreen": true,
+    "pauseOnBattery": true,
+    "ecoMode": false
+  }
+}

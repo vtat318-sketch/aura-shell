@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/theme.schema.json",
+  "formatVersion": 1,
+  "id": "midnight",
+  "name": "Полночь",
+  "author": "Aura",
+  "version": "1.0.0",
+  "tags": [
+    "минимализм",
+    "тёмная"
+  ],
+  "palette": {
+    "accent": "#E8E8EC",
+    "surface": "rgba(8,8,10,0.82)",
+    "surfaceSolid": "#0B0B0D",
+    "text": "#F5F3FF",
+    "tile": "rgba(255,255,255,0.05)",
+    "border": "rgba(255,255,255,0.10)"
+  },
+  "taskbar": {
+    "layout": "island",
+    "alignment": "center",
+    "height": 56,
+    "iconSize": 26,
+    "radius": 14,
+    "blur": 18,
+    "hoverEffect": "lift",
+    "iconStyle": "plain",
+    "toolsGroup": true
+  },
+  "clock": {
+    "showSeconds": false,
+    "showDate": true
+  },
+  "windows": {
+    "open": "fade",
+    "minimize": "shrink",
+    "durationMs": 220
+  },
+  "wallpaper": {
+    "type": "procedural",
+    "source": "mono"
+  },
+  "performance": {
+    "pauseOnFullscreen": true,
+    "pauseOnBattery": true,
+    "ecoMode": false
+  }
+}

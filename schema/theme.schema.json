@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aura-shell.app/schema/theme.v1.json",
+  "title": "Aura Shell theme v1",
+  "description": "Декларативная тема Aura. Только данные — никакого исполняемого кода.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["formatVersion", "id", "name", "author", "version", "palette", "taskbar"],
+  "$defs": {
+    "color": {
+      "type": "string",
+      "pattern": "^(#[0-9A-Fa-f]{6}|rgba\\(\\s*\\d{1,3}\\s*,\\s*\\d{1,3}\\s*,\\s*\\d{1,3}\\s*,\\s*(0|1|0?\\.\\d+)\\s*\\))$"
+    },
+    "hex": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "formatVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,47}$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "author": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "tags": { "type": "array", "maxItems": 8, "items": { "type": "string", "maxLength": 24 } },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accent", "surface", "surfaceSolid", "text"],
+      "properties": {
+        "accent": { "$ref": "#/$defs/hex" },
+        "surface": { "$ref": "#/$defs/color" },
+        "surfaceSolid": { "$ref": "#/$defs/hex" },
+        "text": { "$ref": "#/$defs/hex" },
+        "tile": { "$ref": "#/$defs/color" },
+        "border": { "$ref": "#/$defs/color" }
+      }
+    },
+    "taskbar": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layout": { "enum": ["islands", "island", "full"] },
+        "alignment": { "enum": ["center", "left"] },
+        "height": { "type": "integer", "minimum": 40, "maximum": 96 },
+        "iconSize": { "type": "integer", "minimum": 16, "maximum": 48 },
+        "radius": { "type": "integer", "minimum": 0, "maximum": 32 },
+        "blur": { "type": "integer", "minimum": 0, "maximum": 48 },
+        "hoverEffect": { "enum": ["dock", "lift", "none"] },
+        "iconStyle": { "enum": ["tile", "plain"] },
+        "toolsGroup": { "type": "boolean" }
+      }
+    },
+    "clock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "showSeconds": { "type": "boolean" },
+        "showDate": { "type": "boolean" }
+      }
+    },
+    "windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "open": { "enum": ["scale", "slide", "fade", "none"] },
+        "minimize": { "enum": ["genie", "shrink", "fade", "none"] },
+        "durationMs": { "type": "integer", "minimum": 0, "maximum": 1000 }
+      }
+    },
+    "wallpaper": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "source"],
+      "properties": {
+        "type": { "enum": ["procedural", "image", "video", "web", "shader"] },
+        "source": { "type": "string", "maxLength": 260 }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pauseOnFullscreen": { "type": "boolean" },
+        "pauseOnBattery": { "type": "boolean" },
+        "ecoMode": { "type": "boolean" }
+      }
+    }
+  }
+}

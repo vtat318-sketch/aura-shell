@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/theme.schema.json",
+  "formatVersion": 1,
+  "id": "lavender-glass",
+  "name": "Лавандовое стекло",
+  "author": "Aura",
+  "version": "1.0.0",
+  "tags": [
+    "стекло",
+    "тёмная"
+  ],
+  "palette": {
+    "accent": "#C9B8FF",
+    "surface": "rgba(20,20,28,0.72)",
+    "surfaceSolid": "#16161D",
+    "text": "#F5F3FF",
+    "tile": "rgba(255,255,255,0.07)",
+    "border": "rgba(255,255,255,0.10)"
+  },
+  "taskbar": {
+    "layout": "islands",
+    "alignment": "center",
+    "height": 60,
+    "iconSize": 28,
+    "radius": 18,
+    "blur": 24,
+    "hoverEffect": "dock",
+    "iconStyle": "tile",
+    "toolsGroup": true
+  },
+  "clock": {
+    "showSeconds": false,
+    "showDate": true
+  },
+  "windows": {
+    "open": "scale",
+    "minimize": "genie",
+    "durationMs": 300
+  },
+  "wallpaper": {
+    "type": "procedural",
+    "source": "aurora"
+  },
+  "performance": {
+    "pauseOnFullscreen": true,
+    "pauseOnBattery": true,
+    "ecoMode": false
+  }
+}
