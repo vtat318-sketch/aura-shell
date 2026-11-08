@@ -4,6 +4,7 @@ bin/
 obj/
 build-log.txt
 build-errors.txt
+.build-run.ps1
 publish/
 .vs/
 *.user
